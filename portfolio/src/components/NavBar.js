@@ -1,20 +1,20 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 
+
 function NavBar() {
   return (
-    <div>
-      <h3>NavBar</h3>
-      <Nav variant="tabs" defaultActiveKey="/home">
+    <div style={{display: 'flex', justifyContent:'flex-end', paddingRight:'2%'}}>
+    <Nav variant="pills" defaultActiveKey="/home">
       <Nav.Item>
-        <Nav.Link href='/HomePage'>Home</Nav.Link>
+        <Nav.Link style={{color:'black'}} href="/">Home</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link>About</Nav.Link>
+        <Nav.Link style={{color:'black'}} href="/projects">Projects</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link>
-          Projects
+        <Nav.Link style={{color:'black'}} href="/about">
+          About
         </Nav.Link>
       </Nav.Item>
     </Nav>
