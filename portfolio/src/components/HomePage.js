@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
 function HomePage() {
   return (
@@ -26,19 +27,30 @@ function HomePage() {
                 <h1>Hey, I'm Mani Deepak Reddy Aila</h1>
                 <h3>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</h3>
                 <Link to="/projects">
-                    <button type="button">
-                        PROJECTS
-                    </button>
+                    <Button variant="secondary">Secondary</Button>{' '}
                 </Link>
             </div>
             <div style={{padding: '10%'}}>
                 <img src='/assets/self.jpg'/>
             </div>
         </div>
-        <div>
+        <div style={{padding: '10%'}}>
             <h1>
                 About
             </h1>
+            <div>
+                <div style = {{borderLeft: '6px solid #646160', height: '50%'}}>
+                    <div style = {{padding: '2% 5%'}}>
+                        <p style={{fontSize: '120%'}}>A few interesting things about me. I love to read science fiction (my favorite is Frank Herbert's Dune). I am also an avid gamer. I love to play competitive strategy games and first-person shooters. Lastly, I love learning. Every day I push myself to learn something new, whether that be about machine learning, software engineering, or miscellaneous facts about the universe.</p>
+                        <p style={{fontSize: '120%'}}>On top of recently getting married and graduating with a masters in computer science from UT Dallas, I also recently started working as a senior data scientist at Capital One. My work mainly revolves around utilizing natural language processing to build a more intelligent customer experience.</p>
+                    </div>
+                </div>
+            </div>
+            <Link to="/about">
+                <button type="button">
+                    MORE
+                </button>
+            </Link>
         </div>
     </div>
   )
