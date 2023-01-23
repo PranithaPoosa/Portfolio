@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 function Projects() {
   return (
-       <div>
+      <div>
         <div style={{backgroundColor:'#d7d7d7', height:'100px'}}>
           <p style={{textAlign:'center', padding:'2%', fontWeight:'bold'}}>PROJECTS</p>
         </div>
@@ -36,7 +36,6 @@ function Projects() {
         </Card.Body>
        </Card>
     </div>
-
     </div>
   );
 }
