@@ -23,11 +23,12 @@ function HomePage() {
                     </svg>
                 </div>
             </div>
-            <div style={{padding: '8%'}}>
-                <h1>Hey, I'm Mani Deepak Reddy Aila</h1>
-                <h3>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</h3>
+            <div style={{padding: '7%'}}>
+                <h1><span>Hey, I'm</span><br/><b><span> Mani Deepak Reddy Aila </span></b></h1>
+                <h4>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</h4>
+                <br/>
                 <Link to="/projects">
-                    <Button variant="secondary">Secondary</Button>{' '}
+                    <Button variant="secondary">Projects</Button>{' '}
                 </Link>
             </div>
             <div style={{padding: '10%'}}>
@@ -45,11 +46,9 @@ function HomePage() {
                         <p style={{fontSize: '120%'}}>On top of recently getting married and graduating with a masters in computer science from UT Dallas, I also recently started working as a senior data scientist at Capital One. My work mainly revolves around utilizing natural language processing to build a more intelligent customer experience.</p>
                     </div>
                 </div>
-            </div>
-            <Link to="/about">
-                <button type="button">
-                    MORE
-                </button>
+            </div><br/>
+            <Link to="/projects">
+                <Button variant="secondary">More</Button>{' '}
             </Link>
         </div>
     </div>
