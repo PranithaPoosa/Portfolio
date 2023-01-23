@@ -71,7 +71,7 @@ function HomePage() {
         </div>
         <div style={{padding: '4% 0% 10% 0%', textAlign: 'center', backgroundColor: '#ebebeb'}}>
             <h1>
-                Areas of Interest
+                Projects
             </h1>
             
         </div>
