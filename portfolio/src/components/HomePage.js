@@ -85,7 +85,7 @@ function HomePage() {
             <br/>
             <Carousel activeIndex={index} onSelect={handleSelect} >
                 <Carousel.Item>
-                    <Card style={{ width: '60rem' , flexDirection:'row', margin: '3% 0%'}}>
+                    <Card style={{ width: '50%' , flexDirection:'row', margin: '3% 25%'}}>
                         <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
                         <Card.Body>
                         <Card.Title>Card Title</Card.Title>
@@ -100,7 +100,7 @@ function HomePage() {
                     
                 </Carousel.Item>
                 <Carousel.Item>
-                    <Card style={{ width: '60rem' , flexDirection:'row', margin: '3% 0%'}}>
+                    <Card style={{ width: '50%' , flexDirection:'row', margin: '3% 25%'}}>
                         <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
                         <Card.Body>
                         <Card.Title>Card Title</Card.Title>
