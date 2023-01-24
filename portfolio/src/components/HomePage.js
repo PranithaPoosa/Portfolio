@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Carousel from 'react-bootstrap/Carousel'
+import Card from 'react-bootstrap/Card';
+
   
 function HomePage() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
-    <>
+    <div style={{zIndex:'-10'}}>
        <div style={{ display: 'flex', justifyContent:'space-evenly',height: '-webkit-fill-available', width: '100%', backgroundColor: '#ebebeb', alignItems: 'center'}}>
             <div style={{backgroundColor: "white", padding: '0.4%'}}>
                 <div style={{display: 'inline-block', backgroundColor: 'white', padding: '30% 0%'}} onClick={() => console.log('hi')}>
@@ -59,13 +67,13 @@ function HomePage() {
                 </h1>
                 <div style = {{  whiteSpace: 'nowrap' ,flexWrap: 'wrap', display: 'flex', width: '90%', padding: '0'}}>
                     
-                        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Apache Spark</div>
-                        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>HTML</div>
-                        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>CSS</div>
-                        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Python</div>
-                        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Apache Airflow</div>
-                        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Java</div>
-                        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>SQL</div>
+                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Apache Spark</div>
+                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>HTML</div>
+                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>CSS</div>
+                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Python</div>
+                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Apache Airflow</div>
+                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Java</div>
+                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>SQL</div>
                     
                 </div>
             </div>
@@ -74,6 +82,38 @@ function HomePage() {
             <h1>
                 Reviews
             </h1>
+            <br/>
+            <Carousel activeIndex={index} onSelect={handleSelect} >
+                <Carousel.Item>
+                    <Card style={{ width: '60rem' , flexDirection:'row', margin: '3% 0%'}}>
+                        <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
+                        <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Card.Text>
+                        <Card.Link href="#">Card Link</Card.Link>
+                        <Card.Link href="#">Another Link</Card.Link>
+                        </Card.Body>
+                    </Card>
+                    
+                </Carousel.Item>
+                <Carousel.Item>
+                    <Card style={{ width: '60rem' , flexDirection:'row', margin: '3% 0%'}}>
+                        <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
+                        <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Card.Text>
+                        <Card.Link href="#">Card Link</Card.Link>
+                        <Card.Link href="#">Another Link</Card.Link>
+                        </Card.Body>
+                    </Card>
+                </Carousel.Item>
+                </Carousel>
                  
         </div>
         <div style={{padding: '4% 0% 10% 0%', textAlign: 'center', backgroundColor: '#ffffff'}}>
@@ -100,7 +140,7 @@ function HomePage() {
                 </Button>
                 </Form> 
         </div>
-    </>
+    </div>
   )
 }
 
