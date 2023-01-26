@@ -8,6 +8,7 @@ import About from "./components/About";
 import Contributors from "./components/Contributors";
 import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
+import Reviewform from "./components/Reviewform";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/projects" element={<Projects/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/contributors" element={<Contributors/>} />
+          <Route path="/reviewform" element={<Reviewform/>} />
         </Routes>
       </BrowserRouter>
     </div>
