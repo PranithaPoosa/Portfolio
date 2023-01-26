@@ -14,7 +14,7 @@ function HomePage() {
     setIndex(selectedIndex);
   };
   return (
-    <div style={{zIndex:'-10'}}>
+    <div style={{zIndex:'0'}}>
        <div style={{ display: 'flex', justifyContent:'space-evenly',height: '-webkit-fill-available', width: '100%', backgroundColor: '#ebebeb', alignItems: 'center'}}>
             <div style={{backgroundColor: "white", padding: '0.4%'}}>
                 <div style={{display: 'inline-block', backgroundColor: 'white', color: 'black', padding: '30% 0%'}} onClick={() => console.log('hi')}>
