@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function NavBar() {
   return (
-      <Nav variant="pills" style={{backgroundColor: '#3AAFA9', position:'sticky', top: '0', width: '100%', display:'flex', justifyContent: 'space-between', padding: '1% 5%'}}>
+      <Nav variant="pills" style={{zIndex: '10', backgroundColor: '#3AAFA9', position:'sticky', top: '0', width: '100%', display:'flex', justifyContent: 'space-between', padding: '1% 5%'}}>
         <div style = {{paddingLeft: '5%'}}>
           <Nav.Item>
             <Nav.Link style={{backgroundColor: '#3AAFA9', color: 'white', fontSize: '100%'}} href="/"><span><b>A. MANI DEEPAK</b></span></Nav.Link>
