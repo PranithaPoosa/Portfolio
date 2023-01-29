@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import {Link, useParams} from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Carousel from 'react-bootstrap/Carousel'
@@ -8,13 +8,33 @@ import './HomePage.css'
 
   
 function HomePage() {
+  let { profile } = useParams();
   const [index, setIndex] = useState(0);
+  const [data, setData] = useState("")
+  const [skills, setSkills] = useState([])
+
+  useEffect(() => {
+    import(`./../data/${profile}/${profile}.json`)
+      .then((res) => {
+        setData(res.default);
+        setSkills(res.default.skills)
+        
+      }) 
+      .catch(_ => console.log("res::", _));
+  }, [data]);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  var items = skills.map((item) => {
+    return (
+        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>{item}</div>
+    );
+  });
+
   return (
-    <div style={{zIndex:'0'}}>
+        <div style={{zIndex:'0'}}>
        <div style={{ display: 'flex', justifyContent:'space-evenly',height: '-webkit-fill-available', width: '100%', backgroundColor: '#ebebeb', alignItems: 'center'}}>
             <div style={{backgroundColor: "white", padding: '0.4%'}}>
                 <div style={{display: 'inline-block', backgroundColor: 'white', color: 'black', padding: '30% 0%'}} onClick={() => console.log('hi')}>
@@ -35,16 +55,16 @@ function HomePage() {
             </div>
             <div style={{padding: '7%'}}>
                 <h1 style={{color: 'black'}}><span>Hey, I'm</span></h1>
-                <h1 ><b><span style={{color: '#3AAFA9'}}> Mani Deepak Reddy Aila </span></b></h1>
+                <h1 ><b><span style={{color: '#3AAFA9'}}> {data.name} </span></b></h1>
                 <br/>
-                <h5>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</h5>
+                <h5>{data.about_short}</h5>
                 <br/>
                 <Link to="/projects">
                     <Button style={{backgroundColor: '#000000', color: '#FEFFFF'}}><b>Projects</b></Button>
                 </Link>
             </div>
             <div style={{padding: '10%'}}>
-                <img src='/assets/self.jpg'/>
+                <img src='/assets/self.JPG'/>
             </div>
         </div>
         <div style={{padding: '5%', display: 'flex'}}>
@@ -55,7 +75,7 @@ function HomePage() {
                 <div>
                     <div style = {{borderLeft: '6px solid #646160', height: '50%'}}>
                         <div style = {{padding: '2% 5%'}}>
-                            <p style={{fontSize: '120%', textAlign: 'justify'}}>A few interesting things about me. I love to read science fiction (my favorite is Frank Herbert's Dune). I am also an avid gamer. I love to play competitive strategy games and first-person shooters. Lastly, I love learning. Every day I push myself to learn something new, whether that be about machine learning, software engineering, or miscellaneous facts about the universe.</p>
+                            <p style={{fontSize: '120%', textAlign: 'justify'}}>{data.about}</p>
                         </div>
                     </div>
                 </div><br/>
@@ -69,15 +89,8 @@ function HomePage() {
                     Skills
                 </h1>
                 <div style = {{  whiteSpace: 'nowrap' ,flexWrap: 'wrap', display: 'flex', width: '90%', padding: '0'}}>
-                    
-                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Apache Spark</div>
-                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>HTML</div>
-                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>CSS</div>
-                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Python</div>
-                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Apache Airflow</div>
-                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>Java</div>
-                    <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>SQL</div>
-                    
+                    {/* {skills.map((item) => {<div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>{item}</div>})} */}
+                    {items}
                 </div>
             </div>
         </div>
@@ -143,7 +156,7 @@ function HomePage() {
                 </Button>
                 </Form> 
         </div>
-    </div>
+        </div> 
   )
 }
 
