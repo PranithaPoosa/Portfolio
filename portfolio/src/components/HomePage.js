@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {Link, useParams, Navigate} from 'react-router-dom'
+import {Link, useParams, useNavigate} from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Carousel from 'react-bootstrap/Carousel'
@@ -12,9 +12,18 @@ function HomePage() {
   const [index, setIndex] = useState(0);
   const [data, setData] = useState("")
   const [skills, setSkills] = useState([])
+  const [reviews, setReviews] = useState([])
+
+  const [name, setName] = useState("")
+
+  let navigate = useNavigate();
+
+  handleCallback = (nameFromChild) =>{
+    setName(nameFromChild)
+  }
 
   useEffect(() => {
-    import(`./../data/${profile}/${profile}.json`)
+    import(`./../../public/data/${profile}/${profile}.json`)
       .then((res) => {
         setData(res.default);
         setSkills(res.default.skills)
@@ -27,7 +36,17 @@ function HomePage() {
     setIndex(selectedIndex);
   };
 
+  const toReviewForm = () => {
+    navigate('/reviewform')
+  };
+
   var items = skills.map((item) => {
+    return (
+        <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>{item}</div>
+    );
+  });
+
+  var addReviews = reviews.map((item) => {
     return (
         <div style = {{backgroundColor:'#ebebeb', padding: '12px', borderRadius: '10px', margin: '10px'}}>{item}</div>
     );
@@ -64,7 +83,7 @@ function HomePage() {
                 </Link>
             </div>
             <div style={{padding: '10%'}}>
-                <img src='/assets/self.JPG'/>
+                <img width={404} height={500} src={`/data/${profile}/self.JPG`}/>
             </div>
         </div>
         <div style={{padding: '5%', display: 'flex'}}>
@@ -102,14 +121,14 @@ function HomePage() {
             </h1>
             </span>
             <span>
-            <Button style={{backgroundColor: '#000000', color: '#FEFFFF'}} onClick={()=>Navigate("/reviewform")}>
+            <Button style={{backgroundColor: '#000000', color: '#FEFFFF'}} onClick={toReviewForm}>
                 Add
             </Button>
             </span>
             </div>
             <br/>
             <Carousel activeIndex={index} onSelect={handleSelect} >
-                <Carousel.Item>
+                {/* <Carousel.Item>
                     <Card style={{ width: '50%' , flexDirection:'row', margin: '3% 25%'}}>
                         <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
                         <Card.Body>
@@ -123,22 +142,8 @@ function HomePage() {
                         </Card.Body>
                     </Card>
                     
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Card style={{ width: '50%' , flexDirection:'row', margin: '3% 25%'}}>
-                        <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
-                        <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
-                        </Card.Text>
-                        <Card.Link href="#">Card Link</Card.Link>
-                        <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
-                </Carousel.Item>
-                </Carousel>
+                </Carousel.Item> */}
+            </Carousel>
                  
         </div>
         <div style={{padding: '4% 0% 10% 0%', textAlign: 'center', backgroundColor: '#ffffff'}}>

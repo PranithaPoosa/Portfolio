@@ -12,7 +12,7 @@ function NavBar() {
         </div>
         <div style={{display: 'flex'}}>
           <Nav.Item>
-            <Nav.Link style={{backgroundColor: '#000000', color: '#FEFFFF'}} href="/">Home</Nav.Link>
+            <Nav.Link style={{backgroundColor: '#000000', color: '#FEFFFF'}} href="/mani">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link style={{backgroundColor: '#000000', color: '#FEFFFF'}} href="/projects">Projects</Nav.Link>
