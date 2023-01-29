@@ -22,6 +22,11 @@ function NavBar() {
               About
             </Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link style={{backgroundColor: '#3AAFA9', border: '1px solid #000000', color: '#FEFFFF'}} href="/about">
+              Resume
+            </Nav.Link>
+          </Nav.Item>
         </div>
         
       </Nav>

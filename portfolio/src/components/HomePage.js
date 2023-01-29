@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {Link, useParams} from 'react-router-dom'
+import {Link, useParams, Navigate} from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Carousel from 'react-bootstrap/Carousel'
@@ -95,9 +95,18 @@ function HomePage() {
             </div>
         </div>
         <div style={{padding: '4% 0% 10% 0%', textAlign: 'center', backgroundColor: '#ebebeb'}}>
+            <div>
+            <span>
             <h1 style={{color: 'black'}}>
                 Reviews
             </h1>
+            </span>
+            <span>
+            <Button style={{backgroundColor: '#000000', color: '#FEFFFF'}} onClick={()=>Navigate("/reviewform")}>
+                Add
+            </Button>
+            </span>
+            </div>
             <br/>
             <Carousel activeIndex={index} onSelect={handleSelect} >
                 <Carousel.Item>
