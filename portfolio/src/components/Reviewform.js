@@ -1,8 +1,11 @@
 import Form from 'react-bootstrap/Form'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 
-function Reviewform(){
+
+function Reviewform({func}){
+
+  const [data, setData] = useState('')
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [designation, setDesignation] = useState('');
@@ -24,13 +27,49 @@ function Reviewform(){
     setFeedback(event.target.value);
   };
 
+  useEffect(() => {
+    fetch(`http://localhost:3001/${func}`).then(res => res.json()).then(
+        result => {
+            setData(result)
+        }
+    ).catch(console.log);
+  }, [])
+
+  function getData() {
+    
+  }
+
+  function handleClick(formData) {
+
+    // Send data to the backend via POST
+    fetch(`http://localhost:3001/${func}`, {
+
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' }, 
+      mode: 'cors', 
+      body: JSON.stringify(formData) // body data type must match "Content-Type" header
+
+    })
+  }
+
   const addReview = (event) => {
+    
     event.preventDefault();
     setDesignation('')
     setEmail('')
     setName('')
     setFeedback('')
-    console.log(name + ' ' + email + ' ' + designation + ' ' + feedback)
+    const formData = {
+        'name': name,
+        'email': email,
+        'designation': designation,
+        'feedback': feedback
+    }
+    data['reviews'].push(formData)
+    setData(data)
+    console.log(data)
+    handleClick(data)
+
   }
     return(
         <div style={{padding: '4% 0% 10% 0%', textAlign: 'center', backgroundColor: '#ffffff'}}>

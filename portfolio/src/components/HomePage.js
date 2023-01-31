@@ -7,30 +7,27 @@ import Card from 'react-bootstrap/Card';
 import './HomePage.css'
 
   
-function HomePage() {
+function HomePage({formData}) {
   let { profile } = useParams();
+  let navigate = useNavigate();
+
   const [index, setIndex] = useState(0);
   const [data, setData] = useState("")
   const [skills, setSkills] = useState([])
   const [reviews, setReviews] = useState([])
 
-  const [name, setName] = useState("")
-
-  let navigate = useNavigate();
-
-  handleCallback = (nameFromChild) =>{
-    setName(nameFromChild)
-  }
 
   useEffect(() => {
-    import(`./../../public/data/${profile}/${profile}.json`)
-      .then((res) => {
-        setData(res.default);
-        setSkills(res.default.skills)
-        
-      }) 
-      .catch(_ => console.log("res::", _));
-  }, [data]);
+    formData(profile)
+    fetch(`http://localhost:3001/${profile}`).then(res => res.json()).then(
+        result => {
+            setData(result)
+            setSkills(result.skills)
+            setReviews(result.reviews)
+            console.log(result)
+        }
+    ).catch(console.log);
+  }, []);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -39,6 +36,33 @@ function HomePage() {
   const toReviewForm = () => {
     navigate('/reviewform')
   };
+
+  var addCarouselItem = reviews.map((item) => {
+    console.log(item)
+    return (
+        <Carousel.Item>
+                    <Card style={{ width: '50%' , flexDirection:'row', margin: '3% 25%'}}>
+                        <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
+                        <Card.Body>
+                        <Card.Title><span><b>{item.name}</b></span></Card.Title>
+                        <Card.Text>
+                            {item.designation}
+                        </Card.Text>
+                        <Card.Text href="#"><span><i>"{item.feedback}"</i></span></Card.Text>
+                        <Card.Text href="#"><span style = {{color: 'blue'}}>{item.email}</span></Card.Text>
+                        </Card.Body>
+                    </Card>
+                    
+                </Carousel.Item> 
+            );
+  });
+
+//   var addCarouselItem1 = () => {
+//     console.log(formData.email)
+//     return (
+//         <div>hi{formData.email}</div>
+//         );
+//   }
 
   var items = skills.map((item) => {
     return (
@@ -128,21 +152,7 @@ function HomePage() {
             </div>
             <br/>
             <Carousel activeIndex={index} onSelect={handleSelect} >
-                {/* <Carousel.Item>
-                    <Card style={{ width: '50%' , flexDirection:'row', margin: '3% 25%'}}>
-                        <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
-                        <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
-                        </Card.Text>
-                        <Card.Link href="#">Card Link</Card.Link>
-                        <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
-                    
-                </Carousel.Item> */}
+                {addCarouselItem}
             </Carousel>
                  
         </div>
