@@ -1,0 +1,202 @@
+{
+  "mani": {
+    "name": "Mani Deepak Reddy Aila",
+    "name_short": "A. Mani Deepak",
+    "about": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+    "about_short": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+    "experience": [
+      {
+        "role": "Masters' in Information Systems",
+        "name": "Northeastern University, Boston",
+        "year": "2022 - 2024 (Expected) ",
+        "description": "Coursework : Application Engineering and Development, Data Science Engineering Methods and Tools, Big Data Systems and Intelligence Analytics, Database Management and Database Design"
+      },
+      {
+        "role": "Software Development Engineer",
+        "name": "Societe Generale Global Solutions Center",
+        "year": "2020 - 2022",
+        "description": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product"
+      },
+      {
+        "role": "Bachelor of Technology in Mathematics & Computing",
+        "name": "Indian Institute of Technology, Delhi",
+        "year": "2016 - 2020",
+        "description": "Coursework : Probability Theory, Statistical Methods & Tools, Multivariate Calculus"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Apache Kafka",
+        "description": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+        "image": "/assets/image.png",
+        "timeline": "https://github.com/ManiDeepakReddyAila/Apache-Kafka"
+      },
+      {
+        "title": "HealthCamp Management System",
+        "description": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+        "image": "/assets/image.png",
+        "timeline": "https://github.com/ManiDeepakReddyAila/Apache-Kafka"
+      }
+    ],
+    "social_media": {
+      "linkedin": "https://www.linkedin.com/in/mani-deepak-aila-ab68a7162/",
+      "github": "https://github.com/ManiDeepakReddyAila"
+    },
+    "contact": {
+      "email": "a.manideepak13@gmail.com",
+      "phone": "857-707-5769"
+    },
+    "skills": [
+      "Apache Spark",
+      "SQL",
+      "CSS",
+      "HTML",
+      "Apache Airflow",
+      "Java",
+      "Python"
+    ],
+    "reviews": [
+    ]
+  },
+  "default": {
+    "name": "{Your Name Goes Here}",
+    "name_short": "{Short Name}",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "about_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi lacus sed viverra tellus in hac. Suspendisse in est ante in nibh.",
+    "experience": [
+      {
+        "role": "Role 1 (Current)",
+        "name": "College/Company 1",
+        "year": "yyyy - yyyy",
+        "description": "{Description of the Work 1}"
+      },
+      {
+        "role": "Role 2",
+        "name": "College/Company 2",
+        "year": "yyyy - yyyy",
+        "description": "{Description of the Work 2}"
+      },
+      {
+        "role": "Role 3",
+        "name": "College/Company 3",
+        "year": "yyyy - yyyy",
+        "description": "{Description of the Work 3}"
+      },
+      {
+        "role": "Role 4",
+        "name": "College/Company 4",
+        "year": "yyyy - yyyy",
+        "description": "{Description of the Work 4}"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Project 1",
+        "description": "{Project Description 1}",
+        "image": "/assets/image.png",
+        "timeline": "{Link to your project source code 1}"
+      },
+      {
+        "title": "Project 2",
+        "description": "{Project Description 2}",
+        "image": "/assets/image.png",
+        "timeline": "{Link to your project source code 2}"
+      },
+      {
+        "title": "Project 3",
+        "description": "{Project Description 3}",
+        "image": "/assets/image.png",
+        "timeline": "{Link to your project source code 3}"
+      },
+      {
+        "title": "Project 4",
+        "description": "{Project Description 4}",
+        "image": "/assets/image.png",
+        "timeline": "{Link to your project source code 4}"
+      }
+    ],
+    "social_media": {
+      "linkedin": "https://www.linkedin.com/",
+      "github": "https://github.com/"
+    },
+    "contact": {
+      "email": "{Email}",
+      "phone": "{Phone}"
+    },
+    "skills": [
+      "Skill 1",
+      "Skill 2",
+      "Skill 3",
+      "Skill 4",
+      "Skill 5",
+      "Skill 6",
+      "Skill 7",
+      "Skill 8",
+      "Skill 9"
+    ],
+    "reviews": [
+      {
+        "name": "{John Doe 1}",
+        "email": "john.doe1@company.org",
+        "designation": "{Designation}",
+        "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Enim facilisis gravida neque conva"
+      },
+      {
+        "name": "{John Doe 2}",
+        "email": "john.doe2@company.org",
+        "designation": "{Designation}",
+        "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Enim facilisis gravida neque conva"
+      }
+    ]
+  },
+  "pranitha": {
+    "name": "Pranitha Poosa",
+    "name_short": "P. Pranitha",
+    "about": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+    "about_short": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product.",
+    "experience": [
+      {
+        "name": "Indian Institute of Technology, Delhi",
+        "year": "2016 - 2020"
+      },
+      {
+        "name": "Northeastern University, Boston",
+        "year": "2016 - 2020"
+      }
+    ],
+    "projects": [
+      {
+        "title": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+        "description": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+        "image": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+        "timeline": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product"
+      }
+    ],
+    "social_media": {
+      "linkedin": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+      "github": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product"
+    },
+    "contact": {
+      "email": "poosapranitha@gmail.com",
+      "phone": "857-707-5769"
+    },
+    "skills": [
+      "Apache Spark",
+      "SQL",
+      "CSS",
+      "HTML",
+      "Apache Airflow",
+      "Java",
+      "Python",
+      "PEGA"
+    ],
+    "reviews": [
+      {
+        "name": "Mani Deepak Reddy Aila",
+        "email": "aila.m@northeastern.edu",
+        "designation": "Colleague",
+        "feedback": "The common mistake is not installing the json-sever package Globally ! What worked for me : I used the command : npm install -g json-server. (-g is for globally"
+      }
+    ]
+  }
+}
