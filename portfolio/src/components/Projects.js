@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from 'react-bootstrap/Card';
+import { useParams } from "react-router-dom";
 
 
 function Projects() {
+  let {profile = 'default'} = useParams()
+  const [data, setData] = useState([])
+  useEffect(() => {
+    fetch(`http://localhost:3001/${profile}`).then(res => res.json()).then(
+        result => {
+            setData(result.projects)
+            // console.log(result)
+        }
+    ).catch(console.log);
+  }, []);
+
+  var addProjectCard = data.map((item) => {
+    return (
+      <Card style={{ width: '60rem' , flexDirection:'row', margin: '3% 0%'}}>
+        <Card.Img src={item.image} class="card-img-top" style={{width:'30%'}}alt="project"/>
+          <Card.Body>
+          <Card.Title><b>{item.title}</b></Card.Title>
+          <Card.Text>
+            {item.description}
+          </Card.Text>
+          <Card.Link target="_blank" href={item.timeline}>Link to Source</Card.Link>
+          </Card.Body>
+        </Card>
+    );
+  });
   return (
       <div>
         <div style={{backgroundColor:'#d7d7d7', height:'100px'}}>
@@ -10,31 +36,7 @@ function Projects() {
         </div>
 
        <div style={{paddingTop:'2%', textAlign: '-webkit-center'}}>
-        <Card style={{ width: '60rem' , flexDirection:'row', margin: '3% 0%'}}>
-        <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
-          <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
-          </Card.Body>
-        </Card>
-
-        <Card style={{ width: '60rem' , flexDirection:'row', borderBlockColor:'none', margin: '3% 0%'}}>
-        <Card.Img src="/assets/image.png" class="card-img-top" style={{width:'30%'}}alt="project"/>
-          <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
-          </Card.Body>
-        </Card>
+        {addProjectCard}
       </div>
     </div>
   );

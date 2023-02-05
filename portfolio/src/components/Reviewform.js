@@ -1,10 +1,11 @@
 import Form from 'react-bootstrap/Form'
 import React, { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 
 
-function Reviewform({func}){
-
+function Reviewform(){
+  let {func} = useParams()
   const [data, setData] = useState('')
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -67,7 +68,6 @@ function Reviewform({func}){
     }
     data['reviews'].push(formData)
     setData(data)
-    console.log(data)
     handleClick(data)
 
   }
@@ -80,20 +80,20 @@ function Reviewform({func}){
             <Form style={{margin: '0% 20%', backgroundColor: '#ebebeb', padding: '2%', borderRadius: '6px'}} onSubmit={addReview}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Full Name</Form.Label>
-                    <Form.Control type='text' placeholder="Enter full name" onChange={nameChange} />
+                    <Form.Control type='text' placeholder="Enter full name" onChange={nameChange} required/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" onChange={emailChange}/>
+                    <Form.Control type="email" placeholder="Enter email" onChange={emailChange} required/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Designation</Form.Label>
-                    <Form.Control type="text" placeholder="Enter your designation" onChange={designationChange} />
+                    <Form.Control type="text" placeholder="Enter your designation" onChange={designationChange} required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Feedback</Form.Label>
-                    <Form.Control as="textarea" placeholder="Briefly rate your experience" rows={6} onChange={feedbackChange} />
+                    <Form.Control as="textarea" placeholder="Briefly rate your experience" rows={6} onChange={feedbackChange} required />
                 </Form.Group>
                 <Button style={{backgroundColor: '#000000', color: '#FEFFFF'}} type="submit" >
                     Submit
