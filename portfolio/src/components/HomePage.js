@@ -35,7 +35,7 @@ function HomePage({formData}) {
 
   useEffect(() => {
     formData(profile)
-    fetch(`http://localhost:3001/${profile}`).then(res => res.json()).then(
+    fetch(`https://my-json-server.typicode.com/pranithapoosa/portfolio/${profile}`).then(res => res.json()).then(
         result => {
             setData(result)
             setSkills(result.skills)
