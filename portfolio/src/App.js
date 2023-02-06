@@ -32,7 +32,7 @@ function App() {
             <Route path="/:profile/about" element={<About/>} />
             <Route path="/:profile/resume" element={<Resume/>} />
             <Route path="/contributors" element={<Contributors/>} />
-            <Route path="/reviewform" element={<Reviewform/>} />
+            <Route path="/:profile/reviewform" element={<Reviewform/>} />
           </Route>
         </Routes>
       </BrowserRouter>

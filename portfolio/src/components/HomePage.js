@@ -77,7 +77,7 @@ function HomePage({formData}) {
   };
 
   const toReviewForm = () => {
-    navigate('/reviewform')
+    navigate(`/reviewform`)
   };
 
   var addCarouselItem = reviews.map((item) => {
@@ -172,9 +172,12 @@ function HomePage({formData}) {
             </h1>
             </span>
             <span>
-            <Button style={{backgroundColor: '#000000', color: '#FEFFFF'}} onClick={toReviewForm}>
-                Add
-            </Button>
+            <Link to={`/${profile}/reviewform`}>
+                <Button style={{backgroundColor: '#000000', color: '#FEFFFF'}} >
+                    Add
+                </Button>
+            </Link>
+            
             </span>
             </div>
             <br/>
