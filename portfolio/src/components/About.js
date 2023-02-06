@@ -8,7 +8,7 @@ function About() {
   let {profile = 'default'} = useParams()
   const [data, setData] = useState([])
   useEffect(() => {
-    fetch(`https://my-json-server.typicode.com/pranithapoosa/portfolio/${profile}`).then(res => res.json()).then(
+    fetch(`https://my-json-server.typicode.com/pranithapoosa/json-server/${profile}`).then(res => res.json()).then(
         result => {
             setData(result.experience)
             // console.log(result)

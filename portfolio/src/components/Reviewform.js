@@ -29,7 +29,7 @@ function Reviewform(){
   };
 
   useEffect(() => {
-    fetch(`https://my-json-server.typicode.com/pranithapoosa/portfolio/${func}`).then(res => res.json()).then(
+    fetch(`https://my-json-server.typicode.com/pranithapoosa/json-server/${func}`).then(res => res.json()).then(
         result => {
             setData(result)
         }
@@ -43,7 +43,7 @@ function Reviewform(){
   function handleClick(formData) {
 
     // Send data to the backend via POST
-    fetch(`https://my-json-server.typicode.com/pranithapoosa/portfolio/${func}`, {
+    fetch(`https://my-json-server.typicode.com/pranithapoosa/json-server/${func}`, {
 
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' }, 
