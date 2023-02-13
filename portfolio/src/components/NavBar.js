@@ -9,7 +9,7 @@ function NavBar() {
   const [data, setData] = useState("")
 
   useEffect(() => {
-    fetch(`https://my-json-server.typicode.com/pranithapoosa/json-server/${profile}`).then(res => res.json()).then(
+    fetch(`http://localhost:3001/${profile}`).then(res => res.json()).then(
         result => {
             setData(result)
         }

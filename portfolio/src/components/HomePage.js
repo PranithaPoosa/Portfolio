@@ -35,7 +35,7 @@ function HomePage({formData}) {
 
   useEffect(() => {
     formData(profile)
-    fetch(`https://my-json-server.typicode.com/pranithapoosa/json-server/${profile}`).then(res => res.json()).then(
+    fetch(`http://localhost:3001/${profile}`).then(res => res.json()).then(
         result => {
             setData(result)
             setSkills(result.skills)
@@ -135,7 +135,7 @@ function HomePage({formData}) {
                 </Link>
             </div>
             <div style={{padding: '10%'}}>
-                <img width={404} height={500} src={`/data/${profile}/${profile}.jpg`}/>
+                <img width={404} height={500} src={process.env.PUBLIC_URL + `/data/${profile}/${profile}.jpg`} />
             </div>
         </div>
         <div style={{padding: '5%', display: 'flex'}}>

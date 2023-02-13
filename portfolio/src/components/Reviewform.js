@@ -2,10 +2,10 @@ import Form from 'react-bootstrap/Form'
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
-
+import axios from 'axios';
 
 function Reviewform(){
-  let {func} = useParams()
+  let {profile} = useParams()
   const [data, setData] = useState('')
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -29,7 +29,8 @@ function Reviewform(){
   };
 
   useEffect(() => {
-    fetch(`https://my-json-server.typicode.com/pranithapoosa/json-server/${func}`).then(res => res.json()).then(
+    console.log(profile)
+    fetch(`http://localhost:3001/${profile}`).then(res => res.json()).then(
         result => {
             setData(result)
         }
@@ -43,14 +44,21 @@ function Reviewform(){
   function handleClick(formData) {
 
     // Send data to the backend via POST
-    fetch(`https://my-json-server.typicode.com/pranithapoosa/json-server/${func}`, {
+      // fetch(`http://localhost:3001/${profile}`, {
 
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' }, 
-      mode: 'cors', 
-      body: JSON.stringify(formData) // body data type must match "Content-Type" header
+      // method: 'PUT',
+      // headers: { 'Content-Type': 'application/json' }, 
+      // mode: 'cors', 
+      // body: JSON.stringify(formData) // body data type must match "Content-Type" header
 
-    })
+    // })
+    const headers = { 'Accept': 'application/json','Content-Type': 'application/json' }
+    axios.post(`http://localhost:3001/${profile}`, JSON.stringify(formData), {headers})
+    .then(response => console.log(response) )
+    .catch(error => {
+        console.error('There was an error!', error);
+    });
+    
   }
 
   const addReview = (event) => {
@@ -66,6 +74,7 @@ function Reviewform(){
         'designation': designation,
         'feedback': feedback
     }
+    console.log(formData)
     data['reviews'].push(formData)
     setData(data)
     handleClick(data)

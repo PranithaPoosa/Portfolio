@@ -28,13 +28,13 @@
       {
         "title": "Apache Kafka",
         "description": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
-        "image": "/assets/image.png",
+        "image": "/image.png",
         "timeline": "https://github.com/ManiDeepakReddyAila/Apache-Kafka"
       },
       {
         "title": "HealthCamp Management System",
         "description": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
-        "image": "/assets/image.png",
+        "image": "/image.png",
         "timeline": "https://github.com/ManiDeepakReddyAila/Apache-Kafka"
       }
     ],
@@ -56,6 +56,18 @@
       "Python"
     ],
     "reviews": [
+      {
+        "name": "{John Doe 1}",
+        "email": "john.doe1@company.org",
+        "designation": "{Designation}",
+        "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Enim facilisis gravida neque conva"
+      },
+      {
+        "name": "acsas",
+        "email": "acs@asca.com",
+        "designation": "asca",
+        "feedback": "acdj sdfd"
+      }
     ]
   },
   "default": {
@@ -93,25 +105,25 @@
       {
         "title": "Project 1",
         "description": "{Project Description 1}",
-        "image": "/assets/image.png",
+        "image": "/image.png",
         "timeline": "{Link to your project source code 1}"
       },
       {
         "title": "Project 2",
         "description": "{Project Description 2}",
-        "image": "/assets/image.png",
+        "image": "/image.png",
         "timeline": "{Link to your project source code 2}"
       },
       {
         "title": "Project 3",
         "description": "{Project Description 3}",
-        "image": "/assets/image.png",
+        "image": "/image.png",
         "timeline": "{Link to your project source code 3}"
       },
       {
         "title": "Project 4",
         "description": "{Project Description 4}",
-        "image": "/assets/image.png",
+        "image": "/image.png",
         "timeline": "{Link to your project source code 4}"
       }
     ],
@@ -168,7 +180,7 @@
       {
         "title": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
         "description": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
-        "image": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product",
+        "image": "/image.png",
         "timeline": "A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product"
       }
     ],

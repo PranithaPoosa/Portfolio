@@ -7,7 +7,7 @@ function Projects() {
   let {profile = 'default'} = useParams()
   const [data, setData] = useState([])
   useEffect(() => {
-    fetch(`https://my-json-server.typicode.com/pranithapoosa/json-server/${profile}`).then(res => res.json()).then(
+    fetch(`http://localhost:3001/${profile}`).then(res => res.json()).then(
         result => {
             setData(result.projects)
         }
@@ -17,7 +17,7 @@ function Projects() {
   var addProjectCard = data.map((item) => {
     return (
       <Card style={{ width: '60rem' , flexDirection:'row', margin: '3% 0%'}}>
-        <Card.Img src={item.image} class="card-img-top" style={{width:'30%'}}alt="project"/>
+        <Card.Img src={process.env.PUBLIC_URL + item.image} class="card-img-top" style={{width:'30%'}}alt="project"/>
           <Card.Body>
           <Card.Title><b>{item.title}</b></Card.Title>
           <Card.Text>
